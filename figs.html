@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>风水·国学 图解速查页</title>
+<style>
+:root{--ink:#222;--blue:#1a478a;--blue2:#2c5f9e;--gold:#8a6a1e;--red:#b03024;--green:#2e6b2e;--grey:#777;--line:#e3e0d8;--paper:#fbfaf7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Songti SC","SimSun","Noto Serif CJK SC",serif;line-height:1.75}
+header{background:linear-gradient(135deg,#12305c,#2c5f9e);color:#fff;padding:52px 24px 42px;text-align:center}
+header h1{margin:0;font-size:38px;letter-spacing:6px;font-weight:700}
+header .sub{margin-top:14px;font-size:15px;opacity:.86;letter-spacing:2px}
+header .meta{margin-top:22px;font-size:12.5px;opacity:.7}
+nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);
+ padding:10px 16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05);overflow-x:auto;white-space:nowrap}
+nav a{display:inline-block;margin:0 9px;font-size:13.5px;color:var(--blue2);text-decoration:none;
+ padding:4px 10px;border-radius:14px}
+nav a:hover{background:#eef3fa}
+main{max-width:1000px;margin:0 auto;padding:8px 20px 80px}
+section{padding:34px 0 10px;border-bottom:1px dashed var(--line)}
+section:last-of-type{border-bottom:none}
+h2{font-size:24px;color:var(--blue);margin:8px 0 6px;letter-spacing:1px}
+h2 .tag{font-size:12px;background:#eef3fa;color:var(--blue2);padding:3px 9px;border-radius:10px;
+ margin-left:10px;letter-spacing:0;vertical-align:middle}
+h3{font-size:17px;color:#33445a;margin:22px 0 8px}
+p{margin:9px 0;font-size:15px}
+.lead{color:#555;font-size:14.5px;background:#fff;border-left:3px solid var(--blue2);
+ padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin:18px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.card h4{margin:0 0 8px;font-size:15.5px;color:var(--blue2)}
+.card p,.card li{font-size:13.6px;color:#444;margin:5px 0}
+svg.fig{width:100%;height:auto;display:block}
+.num{font-size:30px;font-weight:700;font-family:"Helvetica Neue",Arial,sans-serif}
+.gua{font-size:21px;font-weight:700}
+.mid{font-size:13.5px;text-anchor:middle}
+.small{font-size:11.5px;text-anchor:middle}
+.dir{font-size:13px;fill:#8a8a8a}
+.shanB{font-size:17px;font-weight:700;fill:#2b5d8a}
+.shanO{font-size:15.5px;fill:#555}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px;background:#fff}
+th{background:#f4f2ec;font-weight:700;padding:9px 8px;border-bottom:2px solid #333;text-align:left}
+td{padding:8px;border-bottom:1px solid #eee;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.badge{display:inline-block;font-size:11px;padding:2px 7px;border-radius:9px;white-space:nowrap}
+.b-ok{background:#e6f2e6;color:#2e6b2e}
+.b-warn{background:#fdf2e0;color:#a56200}
+.b-no{background:#fbeaea;color:#b03024}
+.b-view{background:#eaeff8;color:#2c5f9e}
+.sha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:14px;margin:18px 0}
+.sha{background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 10px 10px 0;padding:14px 16px}
+.sha h4{margin:0 0 6px;font-size:15px;color:#b03024}
+.sha p{font-size:13.2px;color:#444;margin:4px 0}
+.sha .how{font-size:12.6px;color:var(--green);margin-top:6px}
+.path{border-top:5px solid var(--blue2);border-radius:10px;background:#fff;padding:20px;box-shadow:0 3px 14px rgba(0,0,0,.05)}
+.path .cost{font-size:13px;color:#555;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+.path .cost b{color:var(--blue)}
+.quote{border-left:3px solid var(--gold);background:#fdfaf0;padding:12px 16px;font-family:"KaiTi","楷体",serif;
+ font-size:15px;color:#6b5518;border-radius:0 8px 8px 0;margin:14px 0}
+footer{background:#f4f2ec;text-align:center;padding:26px;font-size:12.5px;color:var(--grey);border-top:1px solid var(--line)}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}header h1{font-size:27px}}
+@media print{nav{display:none}section{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+  <h1>风水 · 国学 图解速查</h1>
+  <div class="sub">九宫格 · 二十四山 · 五行生克 · 十四煞 · 三条路径</div>
+  <div class="meta">配合《零基础自学指南》《小说风水常识分类整理》使用 ｜ 2026-10 ｜ 为 Kai 定制</div>
+</header>
+<nav>
+  <a href="#jiugong">① 九宫格</a>
+  <a href="#shan24">② 二十四山</a>
+  <a href="#wuxing">③ 五行生克</a>
+  <a href="#luoshu">④ 洛书口诀</a>
+  <a href="#sha">⑤ 十四煞</a>
+  <a href="#paths">⑥ 三条路径</a>
+  <a href="#labels">⑦ 标注约定</a>
+</nav>
+<main>
+<section id="jiugong">
+  <h2>① 九宫格：风水的「坐标系」<span class="tag">先记这个</span></h2>
+  <p class="lead">风水里所有的方位判断，最后都落到这张九宫格上。古人画图是「上南下北、左东右西」（和现代地图上下相反），下面按传统画法。</p>
+  <div class="grid2">
+    <div><svg viewBox="0 0 560 560" class="fig">
+<rect x="0" y="0" width="560" height="560" fill="#fbfaf7" rx="10"/>
+<text x="280" y="24" class="dir">南（离）</text>
+<text x="280" y="552" class="dir">北（坎）</text>
+<text x="14" y="284" class="dir">东（震）</text>
+<text x="546" y="284" class="dir" text-anchor="end">西（兑）</text>
+<rect x="60" y="50" width="146" height="146" rx="12" fill="#3f8f5c22" stroke="#3f8f5c" stroke-width="2"/>
+<text x="78" y="90" class="num" fill="#3f8f5c">4</text>
+<text x="190" y="90" class="gua" fill="#3f8f5c" text-anchor="end">巽</text>
+<text x="133" y="128" class="mid" fill="#333">东南</text>
+<text x="133" y="156" class="mid" fill="#3f8f5c">五行 木</text>
+<text x="133" y="182" class="small" fill="#666">长女</text>
+<rect x="210" y="50" width="146" height="146" rx="12" fill="#c0392b22" stroke="#c0392b" stroke-width="2"/>
+<text x="228" y="90" class="num" fill="#c0392b">9</text>
+<text x="340" y="90" class="gua" fill="#c0392b" text-anchor="end">离</text>
+<text x="283" y="128" class="mid" fill="#333">南</text>
+<text x="283" y="156" class="mid" fill="#c0392b">五行 火</text>
+<text x="283" y="182" class="small" fill="#666">次女</text>
+<rect x="360" y="50" width="146" height="146" rx="12" fill="#b0872f22" stroke="#b0872f" stroke-width="2"/>
+<text x="378" y="90" class="num" fill="#b0872f">2</text>
+<text x="490" y="90" class="gua" fill="#b0872f" text-anchor="end">坤</text>
+<text x="433" y="128" class="mid" fill="#333">西南</text>
+<text x="433" y="156" class="mid" fill="#b0872f">五行 土</text>
+<text x="433" y="182" class="small" fill="#666">母</text>
+<rect x="60" y="200" width="146" height="146" rx="12" fill="#3f8f5c22" stroke="#3f8f5c" stroke-width="2"/>
+<text x="78" y="240" class="num" fill="#3f8f5c">3</text>
+<text x="190" y="240" class="gua" fill="#3f8f5c" text-anchor="end">震</text>
+<text x="133" y="278" class="mid" fill="#333">东</text>
+<text x="133" y="306" class="mid" fill="#3f8f5c">五行 木</text>
+<text x="133" y="332" class="small" fill="#666">长子</text>
+<rect x="210" y="200" width="146" height="146" rx="12" fill="#eeeeee" stroke="#8a8a8a" stroke-width="2"/>
+<text x="283" y="262" class="num" fill="#8a8a8a">5</text>
+<text x="283" y="296" class="small" fill="#666">中宫 · 平衡数</text>
+<rect x="360" y="200" width="146" height="146" rx="12" fill="#6b7a8f22" stroke="#6b7a8f" stroke-width="2"/>
+<text x="378" y="240" class="num" fill="#6b7a8f">7</text>
+<text x="490" y="240" class="gua" fill="#6b7a8f" text-anchor="end">兑</text>
+<text x="433" y="278" class="mid" fill="#333">西</text>
+<text x="433" y="306" class="mid" fill="#6b7a8f">五行 金</text>
+<text x="433" y="332" class="small" fill="#666">幼女</text>
+<rect x="60" y="350" width="146" height="146" rx="12" fill="#b0872f22" stroke="#b0872f" stroke-width="2"/>
+<text x="78" y="390" class="num" fill="#b0872f">8</text>
+<text x="190" y="390" class="gua" fill="#b0872f" text-anchor="end">艮</text>
+<text x="133" y="428" class="mid" fill="#333">东北</text>
+<text x="133" y="456" class="mid" fill="#b0872f">五行 土</text>
+<text x="133" y="482" class="small" fill="#666">幼子</text>
+<rect x="210" y="350" width="146" height="146" rx="12" fill="#2b5d8a22" stroke="#2b5d8a" stroke-width="2"/>
+<text x="228" y="390" class="num" fill="#2b5d8a">1</text>
+<text x="340" y="390" class="gua" fill="#2b5d8a" text-anchor="end">坎</text>
+<text x="283" y="428" class="mid" fill="#333">北</text>
+<text x="283" y="456" class="mid" fill="#2b5d8a">五行 水</text>
+<text x="283" y="482" class="small" fill="#666">次子</text>
+<rect x="360" y="350" width="146" height="146" rx="12" fill="#6b7a8f22" stroke="#6b7a8f" stroke-width="2"/>
+<text x="378" y="390" class="num" fill="#6b7a8f">6</text>
+<text x="490" y="390" class="gua" fill="#6b7a8f" text-anchor="end">乾</text>
+<text x="433" y="428" class="mid" fill="#333">西北</text>
+<text x="433" y="456" class="mid" fill="#6b7a8f">五行 金</text>
+<text x="433" y="482" class="small" fill="#666">父</text>
+</svg></div>
+    <div>
+      <h3>怎么记：一句话 + 三个规律</h3>
+      <div class="quote">戴九履一，左三右七，四二为肩，八六为足</div>
+      <p>把它想成一个站着的人：<b>9</b> 是帽子（上），<b>1</b> 是鞋子（下），<b>3</b> 在左 <b>7</b> 在右，<b>4</b> 和 <b>2</b> 是肩膀（上面两个角），<b>8</b> 和 <b>6</b> 是腿脚（下面两个角）。</p>
+      <h3>三个可以自己验算的规律</h3>
+      <ul>
+        <li><b>横、竖、斜相加都是 15</b>（4+9+2 = 3+5+7 = 8+1+6 = 4+3+8 = 15 …）</li>
+        <li><b>四正位（上下左右）全是奇数</b>：9 上、1 下、3 左、7 右</li>
+        <li><b>四角全是偶数</b>：小偶数（2、4）在上面，大偶数（6、8）在下面</li>
+      </ul>
+      <p style="font-size:13px;color:#777">★ 这是整套指南里唯一要求你背下来的口诀。其余都是理解性的，不用背。</p>
+    </div>
+  </div>
+  <h3>九宫每一格代表什么</h3>
+  <table>
+    <tr><th>数</th><th>卦</th><th>方位</th><th>五行</th><th>代表家人</th><th>喜忌（某流派说法）</th></tr>
+    <tr><td>9</td><td>离</td><td>南</td><td>火</td><td>次女（中女）</td><td>方位偏高，喜水</td></tr>
+    <tr><td>4</td><td>巽</td><td>东南</td><td>木</td><td>长女</td><td>偏低，喜砂</td></tr>
+    <tr><td>2</td><td>坤</td><td>西南</td><td>土</td><td>母亲</td><td>偏低，喜砂</td></tr>
+    <tr><td>3</td><td>震</td><td>东</td><td>木</td><td>长子</td><td>偏低，喜砂</td></tr>
+    <tr><td>5</td><td>—</td><td>中央</td><td>土</td><td>—</td><td>平衡数，一切调整的目标</td></tr>
+    <tr><td>7</td><td>兑</td><td>西</td><td>金</td><td>幼女（少女）</td><td>偏高，喜水</td></tr>
+    <tr><td>8</td><td>艮</td><td>东北</td><td>土</td><td>幼子（少男）</td><td>偏低，喜砂</td></tr>
+    <tr><td>1</td><td>坎</td><td>北</td><td>水</td><td>次子（中男）</td><td>偏低，喜砂</td></tr>
+    <tr><td>6</td><td>乾</td><td>西北</td><td>金</td><td>父亲</td><td>偏高，喜水</td></tr>
+  </table>
+  <p style="font-size:13px;color:#777">⚠️「喜砂 / 喜水」是小说中某一流派（以 5 为平衡数）的说法，不是通行共识；「九宫配家人」则是通行说法（乾父坤母震长男巽长女坎中男离中女艮少男兑少女）。</p>
+</section>
+
+<section id="shan24">
+  <h2>② 二十四山：罗盘上的 24 个方位<span class="tag">360° ÷ 24 = 15°</span></h2>
+  <p class="lead">把圆周三等分不够、八等分太粗，风水用 <b>24 个方位</b>，每个 15°。它的构成很简单：<b>12 地支 + 8 天干 + 4 个卦</b> = 24。天干里的戊、己因为属中央土，「到处飞」，不进圈。</p>
+  <div class="grid2">
+    <div><svg viewBox="0 0 560 560" class="fig">
+<rect x="0" y="0" width="560" height="560" fill="#fbfaf7" rx="10"/>
+<path d="M241.2,135.1 L280.0,130.0 L280.0,30.0 L215.3,38.5 Z" fill="#2b5d8a22" stroke="#ccc" stroke-width="1"/>
+<text x="253.9" y="86.7" class="shanO" text-anchor="middle">壬</text>
+<path d="M205.0,150.1 L241.2,135.1 L215.3,38.5 L155.0,63.5 Z" fill="#2b5d8a22" stroke="#ccc" stroke-width="1"/>
+<text x="203.5" y="100.2" class="shanB" text-anchor="middle">子</text>
+<path d="M173.9,173.9 L205.0,150.1 L155.0,63.5 L103.2,103.2 Z" fill="#2b5d8a22" stroke="#ccc" stroke-width="1"/>
+<text x="158.2" y="126.3" class="shanO" text-anchor="middle">癸</text>
+<path d="M150.1,205.0 L173.9,173.9 L103.2,103.2 L63.5,155.0 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="121.3" y="163.2" class="shanO" text-anchor="middle">丑</text>
+<path d="M135.1,241.2 L150.1,205.0 L63.5,155.0 L38.5,215.3 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="95.2" y="208.5" class="shanB" text-anchor="middle">艮</text>
+<path d="M130.0,280.0 L135.1,241.2 L38.5,215.3 L30.0,280.0 Z" fill="#b0872f22" stroke="#ccc" stroke-width="1"/>
+<text x="81.7" y="258.9" class="shanO" text-anchor="middle">寅</text>
+<path d="M135.1,318.8 L130.0,280.0 L30.0,280.0 L38.5,344.7 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="81.7" y="311.1" class="shanO" text-anchor="middle">甲</text>
+<path d="M150.1,355.0 L135.1,318.8 L38.5,344.7 L63.5,405.0 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="95.2" y="361.5" class="shanB" text-anchor="middle">卯</text>
+<path d="M173.9,386.1 L150.1,355.0 L63.5,405.0 L103.2,456.8 Z" fill="#b0872f22" stroke="#ccc" stroke-width="1"/>
+<text x="121.3" y="406.8" class="shanO" text-anchor="middle">乙</text>
+<path d="M205.0,409.9 L173.9,386.1 L103.2,456.8 L155.0,496.5 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="158.2" y="443.7" class="shanO" text-anchor="middle">辰</text>
+<path d="M241.2,424.9 L205.0,409.9 L155.0,496.5 L215.3,521.5 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="203.5" y="469.8" class="shanB" text-anchor="middle">巽</text>
+<path d="M280.0,430.0 L241.2,424.9 L215.3,521.5 L280.0,530.0 Z" fill="#b0872f22" stroke="#ccc" stroke-width="1"/>
+<text x="253.9" y="483.3" class="shanO" text-anchor="middle">巳</text>
+<path d="M318.8,424.9 L280.0,430.0 L280.0,530.0 L344.7,521.5 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="306.1" y="483.3" class="shanO" text-anchor="middle">丙</text>
+<path d="M355.0,409.9 L318.8,424.9 L344.7,521.5 L405.0,496.5 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="356.5" y="469.8" class="shanB" text-anchor="middle">午</text>
+<path d="M386.1,386.1 L355.0,409.9 L405.0,496.5 L456.8,456.8 Z" fill="#b0872f22" stroke="#ccc" stroke-width="1"/>
+<text x="401.8" y="443.7" class="shanO" text-anchor="middle">丁</text>
+<path d="M409.9,355.0 L386.1,386.1 L456.8,456.8 L496.5,405.0 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="438.7" y="406.8" class="shanO" text-anchor="middle">未</text>
+<path d="M424.9,318.8 L409.9,355.0 L496.5,405.0 L521.5,344.7 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="464.8" y="361.5" class="shanB" text-anchor="middle">坤</text>
+<path d="M430.0,280.0 L424.9,318.8 L521.5,344.7 L530.0,280.0 Z" fill="#b0872f22" stroke="#ccc" stroke-width="1"/>
+<text x="478.3" y="311.1" class="shanO" text-anchor="middle">申</text>
+<path d="M424.9,241.2 L430.0,280.0 L530.0,280.0 L521.5,215.3 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="478.3" y="258.9" class="shanO" text-anchor="middle">庚</text>
+<path d="M409.9,205.0 L424.9,241.2 L521.5,215.3 L496.5,155.0 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="464.8" y="208.5" class="shanB" text-anchor="middle">酉</text>
+<path d="M386.1,173.9 L409.9,205.0 L496.5,155.0 L456.8,103.2 Z" fill="#b0872f22" stroke="#ccc" stroke-width="1"/>
+<text x="438.7" y="163.2" class="shanO" text-anchor="middle">辛</text>
+<path d="M355.0,150.1 L386.1,173.9 L456.8,103.2 L405.0,63.5 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="401.8" y="126.3" class="shanO" text-anchor="middle">戌</text>
+<path d="M318.8,135.1 L355.0,150.1 L405.0,63.5 L344.7,38.5 Z" fill="#3f8f5c22" stroke="#ccc" stroke-width="1"/>
+<text x="356.5" y="100.2" class="shanB" text-anchor="middle">乾</text>
+<path d="M280.0,130.0 L318.8,135.1 L344.7,38.5 L280.0,30.0 Z" fill="#b0872f22" stroke="#ccc" stroke-width="1"/>
+<text x="306.1" y="86.7" class="shanO" text-anchor="middle">亥</text>
+<circle cx="280" cy="280" r="118" fill="#fff" stroke="#999" stroke-width="1"/>
+<text x="280" y="238" class="mid" text-anchor="middle" fill="#333">二十四山 = 24 方位</text>
+<text x="280" y="270" class="small" text-anchor="middle" fill="#666">每山 15°，共 360°</text>
+<text x="280" y="304" class="small" text-anchor="middle" fill="#2b5d8a">12 地支（深蓝）</text>
+<text x="280" y="330" class="small" text-anchor="middle" fill="#b0872f">8 天干（赭，无戊己）</text>
+<text x="280" y="356" class="small" text-anchor="middle" fill="#3f8f5c">4 卦（绿：艮巽坤乾）</text>
+<text x="280.0" y="9.0" class="dir" text-anchor="middle">北 子</text>
+<text x="556.0" y="285.0" class="dir" text-anchor="middle">东 卯</text>
+<text x="280.0" y="561.0" class="dir" text-anchor="middle">南 午</text>
+<text x="4.0" y="285.0" class="dir" text-anchor="middle">西 酉</text>
+</svg></div>
+    <div>
+      <h3>怎么拼出来的</h3>
+      <table>
+        <tr><th>组成</th><th>数量</th><th>是哪些</th></tr>
+        <tr><td>十二地支</td><td>12</td><td>子丑寅卯辰巳午未申酉戌亥</td></tr>
+        <tr><td>八天干</td><td>8</td><td>甲乙丙丁庚辛壬癸（<b>去掉戊己</b>）</td></tr>
+        <tr><td>四卦</td><td>4</td><td>艮 · 巽 · 坤 · 乾（四个角）</td></tr>
+        <tr><td colspan="3" style="color:#2e6b2e"><b>合计 24 山</b></td></tr>
+      </table>
+      <h3>为什么这很重要</h3>
+      <p>现代只说「东南西北」是 4 个方位，风水看房子要细到 15°。你有两样东西需要它：</p>
+      <ul>
+        <li><b>量房子的坐向</b>：手机指南针读出度数 → 换算成到哪一「山」</li>
+        <li><b>补角</b>：哪一山缺了，就补哪一山（小说第 629–632 章讲了完整方法）</li>
+      </ul>
+      <p style="font-size:13px;color:#777">✅ 这 24 个名称与罗盘实物完全对应，可查（罗盘是現代指南针的前身；万安罗盘制作技艺 2006 年列入国家级非遗）。</p>
+    </div>
+  </div>
+  <h3>二十四山速记顺序（从正北开始，顺时针）</h3>
+  <table>
+    <tr><th>方位</th><th>三山</th><th>方位</th><th>三山</th></tr>
+    <tr><td>北</td><td>壬 · 子 · 癸</td><td>南</td><td>丙 · 午 · 丁</td></tr>
+    <tr><td>东北</td><td>丑 · 艮 · 寅</td><td>西南</td><td>未 · 坤 · 申</td></tr>
+    <tr><td>东</td><td>甲 · 卯 · 乙</td><td>西</td><td>庚 · 酉 · 辛</td></tr>
+    <tr><td>东南</td><td>辰 · 巽 · 巳</td><td>西北</td><td>戌 · 乾 · 亥</td></tr>
+  </table>
+</section>
+
+<section id="wuxing">
+  <h2>③ 五行生克：风水推理的「算法」<span class="tag">一切断语的底层</span></h2>
+  <p class="lead">风水里说「某方位适合放什么」，本质就是在用这套关系。看懂它，你就能自己推，不用背断语。</p>
+  <div class="grid2">
+    <div><svg viewBox="0 0 560 560" class="fig">
+<rect width="560" height="560" fill="#fbfaf7" rx="10"/>
+<circle cx="280.0" cy="115.0" r="46" fill="#3f8f5c22" stroke="#3f8f5c" stroke-width="2.5"/>
+<text x="280.0" y="124.0" class="gua" text-anchor="middle" fill="#3f8f5c">木</text>
+<circle cx="436.9" cy="229.0" r="46" fill="#c0392b22" stroke="#c0392b" stroke-width="2.5"/>
+<text x="436.9" y="238.0" class="gua" text-anchor="middle" fill="#c0392b">火</text>
+<circle cx="377.0" cy="413.5" r="46" fill="#b0872f22" stroke="#b0872f" stroke-width="2.5"/>
+<text x="377.0" y="422.5" class="gua" text-anchor="middle" fill="#b0872f">土</text>
+<circle cx="183.0" cy="413.5" r="46" fill="#6b7a8f22" stroke="#6b7a8f" stroke-width="2.5"/>
+<text x="183.0" y="422.5" class="gua" text-anchor="middle" fill="#6b7a8f">金</text>
+<circle cx="123.1" cy="229.0" r="46" fill="#2b5d8a22" stroke="#2b5d8a" stroke-width="2.5"/>
+<text x="123.1" y="238.0" class="gua" text-anchor="middle" fill="#2b5d8a">水</text>
+<line x1="280.0" y1="115.0" x2="436.9" y2="229.0" stroke="#3f8f5c" stroke-width="2" stroke-dasharray="7,5" opacity="0.75"/>
+<line x1="436.9" y1="229.0" x2="377.0" y2="413.5" stroke="#3f8f5c" stroke-width="2" stroke-dasharray="7,5" opacity="0.75"/>
+<line x1="377.0" y1="413.5" x2="183.0" y2="413.5" stroke="#3f8f5c" stroke-width="2" stroke-dasharray="7,5" opacity="0.75"/>
+<line x1="183.0" y1="413.5" x2="123.1" y2="229.0" stroke="#3f8f5c" stroke-width="2" stroke-dasharray="7,5" opacity="0.75"/>
+<line x1="123.1" y1="229.0" x2="280.0" y2="115.0" stroke="#3f8f5c" stroke-width="2" stroke-dasharray="7,5" opacity="0.75"/>
+<line x1="280.0" y1="115.0" x2="377.0" y2="413.5" stroke="#c0392b" stroke-width="2" opacity="0.65"/>
+<line x1="436.9" y1="229.0" x2="183.0" y2="413.5" stroke="#c0392b" stroke-width="2" opacity="0.65"/>
+<line x1="377.0" y1="413.5" x2="123.1" y2="229.0" stroke="#c0392b" stroke-width="2" opacity="0.65"/>
+<line x1="183.0" y1="413.5" x2="280.0" y2="115.0" stroke="#c0392b" stroke-width="2" opacity="0.65"/>
+<line x1="123.1" y1="229.0" x2="436.9" y2="229.0" stroke="#c0392b" stroke-width="2" opacity="0.65"/>
+<text x="280" y="42" class="dir" text-anchor="middle">虚线绿 = 相生：木→火→土→金→水→木</text>
+<text x="280" y="530" class="dir" text-anchor="middle">实线红 = 相克：木克土 · 土克水 · 水克火 · 火克金 · 金克木</text>
+</svg></div>
+    <div>
+      <h3>两条关系</h3>
+      <p><b>相生（帮忙）：</b>木生火 → 火生土 → 土生金 → 金生水 → 水生木。转一圈，谁都帮下一个。</p>
+      <p><b>相克（拆台）：</b>木克土 · 土克水 · 水克火 · 火克金 · 金克木。隔一个就打。</p>
+      <h3>小说里额外强调的「耗泄」</h3>
+      <p>去「生」别人，会泄掉自己的能量；去「克」别人也耗能；被别人克最耗能。所以小说第 181 章说：厨房（火）放在坤 2（土）位，是火生土，泄了灶的能量——不好。</p>
+      <h3>举例：为什么"火克金"会被反复提到</h3>
+      <p>炉灶属火，九宫里的 6、7 位属金（乾、兑，对应父、幼女）。火克金 → 所以小说说「灶头朝东、坐在 6 或 7 位，显然不好」。</p>
+    </div>
+  </div>
+  <h3>五行速查（把这一张表记熟，能省一半工夫）</h3>
+  <table>
+    <tr><th></th><th>木</th><th>火</th><th>土</th><th>金</th><th>水</th></tr>
+    <tr><td><b>方位</b></td><td>东</td><td>南</td><td>中</td><td>西</td><td>北</td></tr>
+    <tr><td><b>季节</b></td><td>春</td><td>夏</td><td>每季末月</td><td>秋</td><td>冬</td></tr>
+    <tr><td><b>颜色</b></td><td>绿</td><td>红</td><td>黄</td><td>白</td><td>黑</td></tr>
+    <tr><td><b>形状</b></td><td>长条</td><td>三角</td><td>方形</td><td>圆形</td><td>波浪</td></tr>
+    <tr><td><b>四灵</b></td><td>青龙</td><td>朱雀</td><td>—</td><td>白虎</td><td>玄武</td></tr>
+    <tr><td><b>生成</b></td><td>木生火</td><td>火生土</td><td>土生金</td><td>金生水</td><td>水生木</td></tr>
+    <tr><td><b>所克</b></td><td>木克土</td><td>火克金</td><td>土克水</td><td>金克木</td><td>水克火</td></tr>
+  </table>
+  <p style="font-size:13px;color:#777">✅ 五行配五方五色四季为传统通行说法；⚠️「形状属五行」（圆金/方土/长木/三角火/波浪水）为流派说法。</p>
+</section>
+
+<section id="luoshu">
+  <h2>④ 四灵与「藏风纳气」<span class="tag">看环境的四个方向</span></h2>
+  <p class="lead">四灵是把四个方向人格化，让你一眼判断环境好不好。小说第 198–202 章专门讲了它的正确读法（以及常见的误读）。</p>
+  <table>
+    <tr><th>四灵</th><th>方位</th><th>五行</th><th>代表</th><th>宜</th><th>小说里的关键提醒</th></tr>
+    <tr><td><b>青龙</b></td><td>东</td><td>木</td><td>男 · 春 · 生发</td><td>宜动、宜有起伏</td><td>「宁可青龙高万丈」是比喻，青龙太高压住白虎也是失衡，对女主人不利</td></tr>
+    <tr><td><b>白虎</b></td><td>西</td><td>金</td><td>女 · 秋 · 肃降</td><td>宜静、宜低</td><td>西边不宜有菜市场这类「动」的东西；但也不能被压得太狠</td></tr>
+    <tr><td><b>朱雀</b></td><td>南</td><td>火</td><td>前 · 明堂</td><td>宽敞明亮，但不可一路下坡</td><td>前面一泻千里、毫无阻挡，气就散了，「泄的也是财」</td></tr>
+    <tr><td><b>玄武</b></td><td>北</td><td>水</td><td>后 · 靠山</td><td>高大、安静、稳定</td><td>后方无靠=「福气不够」；后方若是高速路或空地则不宜</td></tr>
+  </table>
+  <div class="quote">风水最基本的原则是「藏风纳气」。——《天眼风水师》第 202 章</div>
+  <p>把所有煞、砂、水、四灵的说法剥掉外壳，剩下的判断标准其实是一句：<b>风不要直来直去，要能回旋；气要能聚住。</b>这句话你可以直接翻译成「穿堂风不好、通风但不直吹」。</p>
+</section>
+<section id="sha">
+  <h2>⑤ 十四煞速查卡<span class="tag">排查自家时照着看</span></h2>
+  <p class="lead">这是小说第 268 章的核心内容。每张卡片的绿色一行，是作者给出的「为什么」——多半能翻译成现代常识。排查时按卡片顺序看一遍自家。</p>
+  <div class="sha-grid">
+    <div class="sha"><h4>天斩煞</h4><p>两栋楼之间的狭窄缝隙正对自己家；缝隙越窄、楼越高越严重。</p><p class="how">风被缝隙挤压加速，直冲自家</p></div>
+    <div class="sha"><h4>路冲</h4><p>路垂直于自家，像刹车失灵会撞进来那种。在房子后面叫「钢刀戳背」。</p><p class="how">前为明枪、后为暗箭；后方更险</p></div>
+    <div class="sha"><h4>割脚煞</h4><p>紧贴房子的水或高速路（路也算水）。</p><p class="how">车流激起短直的风；事故会直接波及</p></div>
+    <div class="sha"><h4>壁刀煞</h4><p>别人的墙壁垂直于自家；墙上的竖广告牌同样。</p><p class="how">风吹到墙面后拐弯直射自家</p></div>
+    <div class="sha"><h4>尖角煞</h4><p>被房屋棱角直接对着（室内外都可能）。</p><p class="how">棱角处气流杂乱、视线压迫</p></div>
+    <div class="sha"><h4>顶心煞</h4><p>正对柱形物：灯柱、电线杆、信号塔、大树干、烟囱；室内柱子也算。</p><p class="how">垂直柱体造成持续的视觉与风场干扰</p></div>
+    <div class="sha"><h4>刀刃煞</h4><p>有薄片状建筑对着自家。</p><p class="how">薄片被风吹起会直射，是实打实的伤害</p></div>
+    <div class="sha"><h4>反弓水</h4><p>水或路呈反弓形对着自家；<b>弓的内侧反而为吉</b>。</p><p class="how">外侧的气因离心力直甩（冲），内侧打圈成祥云状（藏气）</p></div>
+    <div class="sha"><h4>穿堂煞</h4><p>门对窗、窗对窗形成直通的对流风。</p><p class="how">风直来直去，藏不住气</p></div>
+    <div class="sha"><h4>横梁煞</h4><p>横梁压在床或沙发上方；人不宜久在梁下。</p><p class="how">梁下空间压抑感；挪开即可解决</p></div>
+    <div class="sha"><h4>光煞</h4><p>强反光、霓虹光污染；室内大面积镜子或亮面装饰。</p><p class="how">反光让人潜意识受惊，形成心理暗示（第 25 章专论）</p></div>
+    <div class="sha"><h4>刺煞</h4><p>避雷针、电线、剪刀菜刀、带刺植物（仙人掌、龙骨、虎皮兰、月季、枣树）。</p><p class="how">尖刺形成视觉与物理上的「指向」</p></div>
+    <div class="sha"><h4>电磁煞</h4><p>周边有高压线、变压器、信号塔等（也属火煞）。</p><p class="how">高压线周边确实存在电磁场健康争议研究</p></div>
+    <div class="sha"><h4>火形煞</h4><p>三角形形状的物体对着自家。</p><p class="how">火形为三角形，属象征性归类</p></div>
+  </div>
+  <h3>化解三原则（小说口径，按优先级）</h3>
+  <div class="grid3">
+    <div class="card"><h4>① 避（最好）</h4><p>「化煞最好的办法，就是避。直接远离伤害。」换房、换房间、换床位。</p></div>
+    <div class="card"><h4>② 五行化解</h4><p>「万煞不离五行宗，五行化煞有神功」——避不了才用，靠五行关系做调节。</p></div>
+    <div class="card"><h4>③ 物理疏导</h4><p>穿堂煞设屏风或珠帘改变风路；横梁煞把床挪开；镜子拆除或盖不透光布。</p></div>
+  </div>
+  <p style="font-size:13px;color:#777">🔬 作者原话：「同一种煞，不同门派有不同的叫法。大家不必在意名字，只要理解哪种情况对自己有伤害，避开就好。哪怕本章没写的，看起来有危险的、不舒服的，都算煞。君子不立于危墙之下。」</p>
+</section>
+
+<section id="paths">
+  <h2>⑥ 三条学习路径一屏对比<span class="tag">配套《03 三条学习路径》</span></h2>
+  <div class="grid3">
+    <div class="path">
+      <h3 style="margin-top:0">路径一 · 实用主义</h3>
+      <p><b>只为解决自家问题。</b>只学 5 样：测方位 → 画九宫 → 认煞 → 门主灶 → 能改/不能改。</p>
+      <div class="cost">
+        时间 <b>8.5 小时</b><br>
+        金钱 <b>0–100 元</b><br>
+        见效 <b>当天</b><br>
+        可迁移 低<br>
+        风险 不懂原理易被唬
+      </div>
+    </div>
+    <div class="path">
+      <h3 style="margin-top:0">路径二 · 稳扎稳打</h3>
+      <p><b>为系统掌握。</b>L0→L5 六级台阶：打地基 → 读源头 → 选门派 → 实操 → 学术视角。</p>
+      <div class="cost">
+        时间 <b>100–250 小时</b><br>
+        金钱 <b>300–800 元</b><br>
+        见效 约 3 个月<br>
+        可迁移 <b>高</b><br>
+        风险 中途放弃 / 贪多
+      </div>
+    </div>
+    <div class="path">
+      <h3 style="margin-top:0">路径三 · 小说路径</h3>
+      <p><b>跟着《天眼风水师》的叙事顺序走。</b>共 17 个关键站，从第 114 章九宫开始。</p>
+      <div class="cost">
+        时间 <b>20–108 小时</b><br>
+        金钱 <b>0 元</b><br>
+        见效 1–2 周<br>
+        可迁移 低（点状知识）<br>
+        风险 把小说当教材
+      </div>
+    </div>
+  </div>
+  <h3>推荐组合（三条不冲突）</h3>
+  <table>
+    <tr><th>时间</th><th>做什么</th><th>来自</th><th>交付物</th></tr>
+    <tr><td>第 1 个周末</td><td>只学 5 样，给自家做一次环境体检</td><td>路径一</td><td>《我家环境体检表》</td></tr>
+    <tr><td>第 2–3 周</td><td>打地基：阴阳 → 五行 → 干支 → 八卦九宫（背下口诀）</td><td>路径二 L1</td><td>能默画九宫格</td></tr>
+    <tr><td>第 4–8 周</td><td>地基余下：二十四山 / 节气 / 河图洛书</td><td>路径二 L1</td><td>L1 完成</td></tr>
+    <tr><td>第 2–3 个月</td><td>读源头：《葬书》→《周易》说卦传/系辞传 →《阳宅三要》</td><td>路径二 L2</td><td>读书笔记</td></tr>
+    <tr><td>第 3 个月</td><td>同时：读完小说那 17 个关键站（约 20 小时），对照《02 分类整理》</td><td>路径三</td><td>概念全景</td></tr>
+    <tr><td>第 4–6 个月</td><td>选门派：推荐先形势派，读《撼龙经》《雪心赋》</td><td>路径二 L3</td><td>选定方向</td></tr>
+  </table>
+  <div class="quote" style="border-left-color:#b03024;background:#fdf5f4;color:#8a2a1f">
+    真正决定成败的不是选哪条路，而是你能不能忍住不加码。<br>
+    建议把「不学什么」写下来贴在桌前：不学中医、不学命理、不碰数字能量、不报班。
+  </div>
+</section>
+
+<section id="labels">
+  <h2>⑦ 标注约定（三份文件统一）<span class="tag">看结论前先看这个</span></h2>
+  <table>
+    <tr><th>标记</th><th>含义</th><th>你怎么对待</th></tr>
+    <tr><td><span class="badge b-ok">✅ 可查证</span></td><td>能在古籍原文、权威词条、官方名录或数学事实中核对到</td><td>可以放心记</td></tr>
+    <tr><td><span class="badge b-warn">⚠️ 民间口诀 / 流派说法</span></td><td>民间流传、或仅在某派成立；无统一权威出处，各派可能相反</td><td>当「一种说法」，别当定论</td></tr>
+    <tr><td><span class="badge b-no">❌ 无依据 / 现代产物</span></td><td>近几十年出现、无文献支撑，或被普遍认定为商业话术</td><td>知道即可，别花钱</td></tr>
+    <tr><td><span class="badge b-view">🔬 作者个人观点</span></td><td>小说作者本人的心得、推理或批评</td><td>当观点看，可借鉴思路</td></tr>
+  </table>
+  <h3>一句话记住两本书的结构</h3>
+  <p><b>顶上 20%</b>（最能查证、最值得学）：九宫数序、二十四山构成、《阳宅三要》出处、煞里能物理解释的部分。<br>
+  <b>中间 50%</b>（有说法但无定论）：门派争议、民间口诀、择日流派。<br>
+  <b>底下 30%</b>（现代商业玩法）：数字能量、头像预测、象数疗法、改号改运。<br>
+  把力气花在 20% 上，好奇留给 50%，钱包从 30% 里收回来。</p>
+  <h3>最后一句，出自小说作者（第 749 章）</h3>
+  <div class="quote">
+    「别人说的多年验证，抵不过自己的亲自验证。我们要有识别套路的能力。<br>
+    实践是检验真理的唯一标准。不要听别人说了什么就全盘接受，每个人要设置一个属于自己的信息过滤门槛。<br>
+    我分享的内容，也是一样。」
+  </div>
+</section>
+
+</main>
+<footer>
+  本页为图解速查，所有图形按传统通行说法绘制，属「⚠️ 流派说法」而非定论。<br>
+  配合三份 docx 使用：01 自学指南 · 02 小说风水常识分类整理 · 03 三条学习路径对比。<br>
+  为 Kai 定制 · 2026-10 · 基于联网调研 + 两本小说原文提取 + 权威源查证
+</footer>
+</body>
+</html>
