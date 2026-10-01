@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>风水·国学 图解速查页</title>
+<title>术数与风水 图解速查</title>
 <style>
 :root{--ink:#222;--blue:#1a478a;--blue2:#2c5f9e;--gold:#8a6a1e;--red:#b03024;--green:#2e6b2e;--grey:#777;--line:#e3e0d8;--paper:#fbfaf7}
 *{box-sizing:border-box}
@@ -67,22 +67,145 @@ footer{background:#f4f2ec;text-align:center;padding:26px;font-size:12.5px;color:
 </head>
 <body>
 <header>
-  <h1>风水 · 国学 图解速查</h1>
-  <div class="sub">九宫格 · 二十四山 · 五行生克 · 十四煞 · 三条路径</div>
+  <h1>术数 · 风水 图解速查</h1>
+  <div class="sub">术数地图 · 难度天梯 · 小说路径 · 九宫格 · 二十四山 · 五行 · 十四煞</div>
   <div class="meta">配合《零基础自学指南》《小说风水常识分类整理》使用 ｜ 2026-10 ｜ 为 Kai 定制</div>
 </header>
 <nav>
-  <a href="#jiugong">① 九宫格</a>
-  <a href="#shan24">② 二十四山</a>
-  <a href="#wuxing">③ 五行生克</a>
-  <a href="#luoshu">④ 洛书口诀</a>
-  <a href="#sha">⑤ 十四煞</a>
-  <a href="#paths">⑥ 三条路径</a>
-  <a href="#labels">⑦ 标注约定</a>
+  <a href="#shushu-map">① 术数地图</a>
+  <a href="#ladder">② 难度天梯</a>
+  <a href="#novel-path">③ 小说路径</a>
+  <a href="#jiugong">④ 九宫格</a>
+  <a href="#shan24">⑤ 二十四山</a>
+  <a href="#wuxing">⑥ 五行生克</a>
+  <a href="#luoshu">⑦ 四灵</a>
+  <a href="#sha">⑧ 十四煞</a>
+  <a href="#paths">⑨ 三路径</a>
+  <a href="#labels">⑩ 标注约定</a>
 </nav>
 <main>
+<section id="shushu-map">
+  <h2>① 术数全景地图<span class="tag">先看这个</span></h2>
+  <p class="lead">你想了解的这一整片，学术上的正式名字叫<b>术数</b>（也叫数术）。下图按古人的三类分法铺开。<b>注意：所有科目共用同一个底座</b>——这就是为什么换课不需要重新打地基。</p>
+
+  <div style="background:linear-gradient(135deg,#12305c,#2c5f9e);color:#fff;border-radius:12px;padding:16px 20px;text-align:center;margin:16px 0 8px">
+    <div style="font-size:12.5px;opacity:.8;margin-bottom:6px">公共底座（所有科目共用 · 只学一次）</div>
+    <div style="font-size:15px;font-weight:700;letter-spacing:1px">阴阳 · 五行生克 · 天干地支 · 八卦（先后天） · 河图洛书 · 二十四节气</div>
+    <div style="font-size:12px;opacity:.75;margin-top:6px">十神与六亲 —— 只在学「八字」或「六爻」时才需要</div>
+  </div>
+  <div style="text-align:center;color:#bbb;font-size:20px;line-height:1">▼</div>
+
+  <div class="grid3" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card" style="border-left:4px solid #1a478a">
+      <h4>【命】算一生</h4>
+      <p><b>四柱八字</b>（子平术）<br><b>紫微斗数</b><br>五星推命 / 演禽术 / 铁板神数</p>
+      <p style="color:#888;font-size:12.5px">问的是「这个人的格局」</p>
+    </div>
+    <div class="card" style="border-left:4px solid #b0872f">
+      <h4>【卜】算一事</h4>
+      <p><b>周易六爻</b>（火珠林／文王课）<br><b>梅花易数</b>　<b>小六壬</b><br><b>三式</b>：大六壬 · 奇门遁甲 · 太乙神数<br>测字 · 解梦 · 求签</p>
+      <p style="color:#888;font-size:12.5px">问的是「这件事成不成」</p>
+    </div>
+    <div class="card" style="border-left:4px solid #2e6b2e">
+      <h4>【相】看形</h4>
+      <p><b>相宅相墓</b>（＝风水）<br>手相 · 面相 · 摸骨<br>姓名学</p>
+      <p style="color:#888;font-size:12.5px">问的是「这个地方／这个人怎么样」</p>
+    </div>
+  </div>
+  <div class="card" style="border-left:4px solid #7a4a9e;margin-top:-6px">
+    <h4>【择日】单独成一门手艺</h4>
+    <p>黄历择吉 · 各派择日（五行／三合／三元／飞星／奇门／斗首／江公／董公／乌兔…）</p>
+    <p style="color:#888;font-size:12.5px">古属「卜」，今天最实用——搬家、开业、结婚都用得上</p>
+  </div>
+  <p style="font-size:13px;color:#777">✅ 分类出自中文维基「术数」词条。⚠️ 顺带纠正一个常见误解：「五术（山医命相卜）」<b>不是古称</b>，它是 1983 年从日文《中国正統五術占い全書》译回台湾才成型的分类（作者张耀文，明澄派）。</p>
+</section>
+
+<section id="ladder">
+  <h2>② 难度天梯：先上哪一级<span class="tag">依据：前置知识多少 + 规则能否穷举</span></h2>
+  <p class="lead">这十门课<b>难度差得非常远</b>，不是并列关系。下面的排法决定了「先学哪个」。</p>
+  <table>
+    <tr><th>阶</th><th>科目</th><th>要排盘吗</th><th>为什么在这个位置</th><th>大概时长</th></tr>
+    <tr><td>1</td><td><b>测字</b></td><td>不用</td><td>只要认字 + 察人，是「说」的功夫</td><td>1 个月</td></tr>
+    <tr><td>2</td><td><b>梅花易数</b></td><td>不用</td><td>只要八卦 + 五行 + 数字，易占里门槛最低</td><td>3–4 周</td></tr>
+    <tr><td>3</td><td>小六壬</td><td>半</td><td>掐指一算，规则极少，信息量也少</td><td>1 周</td></tr>
+    <tr><td>4</td><td><b>六爻</b>（火珠林/文王课）</td><td>要</td><td>要纳甲、地支、六亲六神，极机械但明确</td><td>2–3 月</td></tr>
+    <tr><td>5</td><td><b>八字</b>（四柱）</td><td>要</td><td>干支 + 十神 + 格局 + 调候，要海量命例</td><td>6–18 月</td></tr>
+    <tr><td>6</td><td>紫微斗数</td><td>要</td><td>排盘复杂、解读直观；古籍少</td><td>6–18 月</td></tr>
+    <tr><td>7</td><td><b>风水</b></td><td>要</td><td>峦头靠眼力、理气靠方位</td><td>6–12 月</td></tr>
+    <tr><td>8</td><td>大六壬</td><td>要</td><td>三式之一，四课三传，古代是士大夫之学</td><td>1–2 年</td></tr>
+    <tr><td>9</td><td>奇门遁甲</td><td>要</td><td>三式之一，术语密度最高</td><td>1–2 年</td></tr>
+    <tr><td>10</td><td>太乙神数</td><td>要</td><td>三式之一，资料最少</td><td>—</td></tr>
+  </table>
+  <div class="grid2">
+    <div class="card" style="border-left:4px solid #2e6b2e">
+      <h4>✅ 建议的入口</h4>
+      <p><b>梅花易数 → 六爻</b>。梅花一周能起第一卦，解决「有没有意思」；六爻规则明确、能自测，是<b>第一门「练习能变强」</b>的课。</p>
+    </div>
+    <div class="card" style="border-left:4px solid #b03024">
+      <h4>❌ 不要从三式开始</h4>
+      <p>六壬／奇门／太乙盘式极繁。地基不牢就学，只会变成「照着书查表」——查表是学不会的。</p>
+    </div>
+  </div>
+</section>
+
+<section id="novel-path">
+  <h2>③ 小说主角的学习路径对照<span class="tag">能不能照着走？</span></h2>
+  <p class="lead">两本小说画的路径<b>完全相反</b>。把它们并排放，一眼就能看出各自缺什么。</p>
+
+  <h3>《起底观心术》万山红 · 传统师承制</h3>
+  <div style="overflow-x:auto;padding:6px 0">
+    <div style="display:flex;gap:8px;min-width:900px;align-items:stretch">
+      <div style="flex:1;background:#fff;border:1px solid #e3e0d8;border-top:4px solid #1a478a;border-radius:10px;padding:12px"><div style="font-size:12px;color:#888">第1–5章</div><b style="font-size:13.5px">被动入行</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">先混进圈子，天天在旁边听，两年后才起拜师的念头</p></div>
+      <div style="align-self:center;color:#bbb">→</div>
+      <div style="flex:1;background:#fff;border:1px solid #e3e0d8;border-top:4px solid #1a478a;border-radius:10px;padding:12px"><div style="font-size:12px;color:#888">第7章 · 21岁</div><b style="font-size:13.5px">拜师（先当学生）</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">未获认可前只能叫「老师」，不能叫师父</p></div>
+      <div style="align-self:center;color:#bbb">→</div>
+      <div style="flex:1;background:#fdf9ef;border:1px solid #e8dcb8;border-top:4px solid #c8a25c;border-radius:10px;padding:12px"><div style="font-size:12px;color:#8a6a1e">第8章 ★</div><b style="font-size:13.5px">先读医书</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">读了两个月，师父随机抽考；这是「先补基础学科」</p></div>
+      <div style="align-self:center;color:#bbb">→</div>
+      <div style="flex:1;background:#fff;border:1px solid #e3e0d8;border-top:4px solid #1a478a;border-radius:10px;padding:12px"><div style="font-size:12px;color:#888">第8–11章</div><b style="font-size:13.5px">学测字 + 先察人</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">「测字之术，首在察人」——真正的核心不是字</p></div>
+      <div style="align-self:center;color:#bbb">→</div>
+      <div style="flex:1;background:#fff;border:1px solid #e3e0d8;border-top:4px solid #1a478a;border-radius:10px;padding:12px"><div style="font-size:12px;color:#888">第10章</div><b style="font-size:13.5px">补百科</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">「你最好是本百科全书」——师父讲典故，一步步教</p></div>
+      <div style="align-self:center;color:#bbb">→</div>
+      <div style="flex:1;background:#fff;border:1px solid #e3e0d8;border-top:4px solid #1a478a;border-radius:10px;padding:12px"><div style="font-size:12px;color:#888">第9/22章</div><b style="font-size:13.5px">真人实习 + 回炉</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">出错后师父「不敢让我实习了，亲自上场」</p></div>
+      <div style="align-self:center;color:#bbb">→</div>
+      <div style="flex:1;background:#eef3fa;border:1px solid #c9d9ee;border-top:4px solid #2c5f9e;border-radius:10px;padding:12px"><div style="font-size:12px;color:#2c5f9e">第15/22章</div><b style="font-size:13.5px">两年 · 得认可</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">标准：悟性好、有灵性、为人谨慎</p></div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:26px">《天眼风水师》三合 · 传书自学制</h3>
+  <div style="overflow-x:auto;padding:6px 0">
+    <div style="display:flex;gap:8px;min-width:760px;align-items:stretch">
+      <div style="flex:1;background:#fff;border:1px solid #e3e0d8;border-top:4px solid #2e6b2e;border-radius:10px;padding:12px"><div style="font-size:12px;color:#888">序</div><b style="font-size:13.5px">师父匆匆教完就下山</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">没有学徒期</p></div>
+      <div style="align-self:center;color:#bbb">→</div>
+      <div style="flex:1;background:#fdf9ef;border:1px solid #e8dcb8;border-top:4px solid #c8a25c;border-radius:10px;padding:12px"><div style="font-size:12px;color:#8a6a1e">第8章 ★</div><b style="font-size:13.5px">传三本书</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">《穷通宝鉴》《滴天髓》+ 师父的《天乙笔记》</p></div>
+      <div style="align-self:center;color:#bbb">→</div>
+      <div style="flex:1;background:#fff;border:1px solid #e3e0d8;border-top:4px solid #2e6b2e;border-radius:10px;padding:12px"><div style="font-size:12px;color:#888">第4/5/7章</div><b style="font-size:13.5px">自主验证</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">「经得起验证的，才能称为科学」</p></div>
+      <div style="align-self:center;color:#bbb">→</div>
+      <div style="flex:1;background:#fff;border:1px solid #e3e0d8;border-top:4px solid #2e6b2e;border-radius:10px;padding:12px"><div style="font-size:12px;color:#888">第44/58章</div><b style="font-size:13.5px">实践 + 珍视反馈</b><p style="font-size:12.5px;color:#555;margin:6px 0 0">「你给了我积累实践的机会，我要谢谢你」</p></div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:26px">逐条判断</h3>
+  <table>
+    <tr><th>环节</th><th>判断</th><th>说明</th></tr>
+    <tr><td>先打基础再上技法</td><td>✅ 成立</td><td>两本书都是「底座 → 技法 → 实战」，与现实一致</td></tr>
+    <tr><td>大量真实案例练习</td><td>✅ 成立</td><td>术数是案例学，不是背知识点</td></tr>
+    <tr><td>记笔记</td><td>✅ 成立</td><td>《天眼》第1章：「得带着脑子和笔记本看」</td></tr>
+    <tr><td>心法比技法重要</td><td>✅ 成立</td><td>「首在察人」「人心才是最大的风水」</td></tr>
+    <tr><td>「两年成才」</td><td>⚠️ 严重打折</td><td>两年能学会「按套路断」，但「断得准」是另一回事；小说省掉了两万次练习</td></tr>
+    <tr><td>师父随时纠错</td><td>⚠️ 不可复制</td><td>这是小说里最关键的机制，自学者没有 —— 最大缺口</td></tr>
+    <tr><td>「灵气」「天目开眼」</td><td>❌ 不成立</td><td>小说给主角开的挂，不是可复制的学习条件</td></tr>
+    <tr><td>断语一说就准</td><td>❌ 不成立</td><td>《起底》第9章自己说了「对错各 50%」</td></tr>
+  </table>
+
+  <div class="quote" style="border-left-color:#b03024;background:#fdf5f4;color:#8a2a1f">
+    ★ 被读者忽略的关键段落（《起底观心术》第17章，师父私下对徒弟说实话）：<br>
+    「徒儿，我平生也要做许多违心事啊。不过，我留了点尾巴，说这块地，十有九人投资要失败，那么总有一人会成功。这是为我留条后路，免得以后别人说我断风水狗屁不如。」<br><br>
+    同一块地：对客户说「风水差」，对徒弟说「千古春秋，万世不易」。<b>这不是术数准不准的问题，这是话术结构的问题。</b>
+  </div>
+</section>
+
 <section id="jiugong">
-  <h2>① 九宫格：风水的「坐标系」<span class="tag">先记这个</span></h2>
+  <h2>④ 九宫格：风水的「坐标系」<span class="tag">先记这个</span></h2>
   <p class="lead">风水里所有的方位判断，最后都落到这张九宫格上。古人画图是「上南下北、左东右西」（和现代地图上下相反），下面按传统画法。</p>
   <div class="grid2">
     <div><svg viewBox="0 0 560 560" class="fig">
@@ -173,7 +296,7 @@ footer{background:#f4f2ec;text-align:center;padding:26px;font-size:12.5px;color:
 </section>
 
 <section id="shan24">
-  <h2>② 二十四山：罗盘上的 24 个方位<span class="tag">360° ÷ 24 = 15°</span></h2>
+  <h2>⑤ 二十四山：罗盘上的 24 个方位<span class="tag">360° ÷ 24 = 15°</span></h2>
   <p class="lead">把圆周三等分不够、八等分太粗，风水用 <b>24 个方位</b>，每个 15°。它的构成很简单：<b>12 地支 + 8 天干 + 4 个卦</b> = 24。天干里的戊、己因为属中央土，「到处飞」，不进圈。</p>
   <div class="grid2">
     <div><svg viewBox="0 0 560 560" class="fig">
@@ -266,7 +389,7 @@ footer{background:#f4f2ec;text-align:center;padding:26px;font-size:12.5px;color:
 </section>
 
 <section id="wuxing">
-  <h2>③ 五行生克：风水推理的「算法」<span class="tag">一切断语的底层</span></h2>
+  <h2>⑥ 五行生克：风水推理的「算法」<span class="tag">一切断语的底层</span></h2>
   <p class="lead">风水里说「某方位适合放什么」，本质就是在用这套关系。看懂它，你就能自己推，不用背断语。</p>
   <div class="grid2">
     <div><svg viewBox="0 0 560 560" class="fig">
@@ -319,7 +442,7 @@ footer{background:#f4f2ec;text-align:center;padding:26px;font-size:12.5px;color:
 </section>
 
 <section id="luoshu">
-  <h2>④ 四灵与「藏风纳气」<span class="tag">看环境的四个方向</span></h2>
+  <h2>⑦ 四灵与「藏风纳气」<span class="tag">看环境的四个方向</span></h2>
   <p class="lead">四灵是把四个方向人格化，让你一眼判断环境好不好。小说第 198–202 章专门讲了它的正确读法（以及常见的误读）。</p>
   <table>
     <tr><th>四灵</th><th>方位</th><th>五行</th><th>代表</th><th>宜</th><th>小说里的关键提醒</th></tr>
@@ -332,7 +455,7 @@ footer{background:#f4f2ec;text-align:center;padding:26px;font-size:12.5px;color:
   <p>把所有煞、砂、水、四灵的说法剥掉外壳，剩下的判断标准其实是一句：<b>风不要直来直去，要能回旋；气要能聚住。</b>这句话你可以直接翻译成「穿堂风不好、通风但不直吹」。</p>
 </section>
 <section id="sha">
-  <h2>⑤ 十四煞速查卡<span class="tag">排查自家时照着看</span></h2>
+  <h2>⑧ 十四煞速查卡<span class="tag">排查自家时照着看</span></h2>
   <p class="lead">这是小说第 268 章的核心内容。每张卡片的绿色一行，是作者给出的「为什么」——多半能翻译成现代常识。排查时按卡片顺序看一遍自家。</p>
   <div class="sha-grid">
     <div class="sha"><h4>天斩煞</h4><p>两栋楼之间的狭窄缝隙正对自己家；缝隙越窄、楼越高越严重。</p><p class="how">风被缝隙挤压加速，直冲自家</p></div>
@@ -352,15 +475,15 @@ footer{background:#f4f2ec;text-align:center;padding:26px;font-size:12.5px;color:
   </div>
   <h3>化解三原则（小说口径，按优先级）</h3>
   <div class="grid3">
-    <div class="card"><h4>① 避（最好）</h4><p>「化煞最好的办法，就是避。直接远离伤害。」换房、换房间、换床位。</p></div>
-    <div class="card"><h4>② 五行化解</h4><p>「万煞不离五行宗，五行化煞有神功」——避不了才用，靠五行关系做调节。</p></div>
-    <div class="card"><h4>③ 物理疏导</h4><p>穿堂煞设屏风或珠帘改变风路；横梁煞把床挪开；镜子拆除或盖不透光布。</p></div>
+    <div class="card"><h4>④ 避（最好）</h4><p>「化煞最好的办法，就是避。直接远离伤害。」换房、换房间、换床位。</p></div>
+    <div class="card"><h4>⑤ 五行化解</h4><p>「万煞不离五行宗，五行化煞有神功」——避不了才用，靠五行关系做调节。</p></div>
+    <div class="card"><h4>⑥ 物理疏导</h4><p>穿堂煞设屏风或珠帘改变风路；横梁煞把床挪开；镜子拆除或盖不透光布。</p></div>
   </div>
   <p style="font-size:13px;color:#777">🔬 作者原话：「同一种煞，不同门派有不同的叫法。大家不必在意名字，只要理解哪种情况对自己有伤害，避开就好。哪怕本章没写的，看起来有危险的、不舒服的，都算煞。君子不立于危墙之下。」</p>
 </section>
 
 <section id="paths">
-  <h2>⑥ 三条学习路径一屏对比<span class="tag">配套《03 三条学习路径》</span></h2>
+  <h2>⑨ 三条学习路径一屏对比<span class="tag">配套《03 三条学习路径》</span></h2>
   <div class="grid3">
     <div class="path">
       <h3 style="margin-top:0">路径一 · 实用主义</h3>
@@ -413,7 +536,7 @@ footer{background:#f4f2ec;text-align:center;padding:26px;font-size:12.5px;color:
 </section>
 
 <section id="labels">
-  <h2>⑦ 标注约定（三份文件统一）<span class="tag">看结论前先看这个</span></h2>
+  <h2>⑩ 标注约定（三份文件统一）<span class="tag">看结论前先看这个</span></h2>
   <table>
     <tr><th>标记</th><th>含义</th><th>你怎么对待</th></tr>
     <tr><td><span class="badge b-ok">✅ 可查证</span></td><td>能在古籍原文、权威词条、官方名录或数学事实中核对到</td><td>可以放心记</td></tr>
